@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    image: texplode/realestate_service:{TAG}
+    # build: .
+    command: bash -c "./start.sh"
+    container_name: realestate_service
+    volumes:
+      - .:/realestate_service
+    ports:
+      - "8000:8000"
+
